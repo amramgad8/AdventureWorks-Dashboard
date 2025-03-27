@@ -1,120 +1,133 @@
-📊 AdventureWorks Sales Dashboard
-Overview
-This Power BI dashboard provides a comprehensive and interactive analysis of the AdventureWorks sales data, enabling business stakeholders to monitor key performance metrics, customer behavior, product performance, and regional sales distribution. The dashboard is built on a well-structured star schema data model to ensure optimal performance and scalability.
+# 🚴‍♂️ AdventureWorks Sales Dashboard
 
-📌 Key Features
-1. Executive Summary (Overview Page)
-Total Revenue: $24.9M
+This Power BI dashboard offers an interactive and insightful view of AdventureWorks' sales performance across products, customers, categories, and regions. It is designed to support data-driven decision-making by presenting real-time KPIs and visual analytics.
 
-Total Profit: $10.5M
+---
 
-Total Orders: 25.2K
+## 📊 Overview
 
-Return Rate: 2.2%
+- **Total Revenue**: `$24.9M`
+- **Total Profit**: `$10.5M`
+- **Orders**: `25.2K`
+- **Return Rate**: `2.2%`
 
-Highlights:
+### Key Highlights:
+- Monthly Revenue: `$1.83M` (↑ +3.31%)
+- Monthly Orders: `2,146` (↓ -0.88%)
+- Monthly Returns: `166` (↑ +1.78%)
 
-Revenue Trend: A clear upward trajectory from Jan 2020 to mid-2022.
+---
 
-Orders by Category: Accessories lead with 17K+ orders, followed by Bikes and Clothing.
+## 📈 Revenue & Orders Insights
 
-Top Products: Water Bottle – 30 oz. is the most ordered product.
+- **Revenue Trending**: A steady upward trend since Jan 2020.
+- **Orders by Category**:
+  - Accessories: 17K
+  - Bikes: 13.9K
+  - Clothing: 7K
+- **Top Products by Orders**:
+  - Water Bottle - 30 oz.
+  - Sport Helmets (Red, Blue, Black)
+  - Road Tire Tube
 
-Monthly KPIs: Monitors changes in revenue, orders, and returns month-over-month.
+- **Most Ordered Product Type**: `Tires and Tubes`
+- **Most Returned Product Type**: `Shorts`
 
-Most Ordered & Most Returned Product Types:
+---
 
-Most Ordered: Tires and Tubes
+## 🌍 Regional Sales Analysis
 
-Most Returned: Shorts
+Interactive map visualization highlighting regional performance across:
 
-2. Geographical Sales Analysis
-Visualizes sales performance across North America, Europe, and Pacific regions.
+- **North America** (Highest: United States)
+- **Europe** (UK, Germany, France)
+- **Pacific** (Australia)
 
-Interactive map highlights the highest-performing regions, with the United States as the leading contributor.
+> Filter buttons allow quick selection by continent.
 
-Quick filters for selecting specific continents for focused analysis.
+---
 
-3. Product-Level Deep Dive
-Focuses on selected product (e.g., Water Bottle – 30 oz.).
+## 🛍️ Product Performance
 
-Tracks monthly performance against targets:
+**Selected Product Example**: `Water Bottle - 30 oz.`
 
-Orders
+- Monthly Orders: `404` vs Target `438`
+- Monthly Revenue: `$4,067` vs Target `$4,292`
+- Monthly Profit: `$2,546` vs Target
+- Dynamic **Price Adjustment Slider**
+- Metrics Available:
+  - Orders
+  - Revenue
+  - Profit
+  - Returns
+  - Return %
 
-Revenue
+📌 *Profit increased by 230.3% between Jun 2021 and Jun 2022.*
 
-Profit
+---
 
-Simulates impact of price adjustments on profit using dynamic sliders.
+## 👥 Customer Analysis
 
-Shows adjusted profit vs total profit trends.
+- **Unique Customers**: `17.4K`
+- **Avg Revenue per Customer**: `$1,431`
+- **Top Customer**: `Mr. Maurice Shan`  
+  - Orders: 6  
+  - Revenue: `$12.4K`
 
-Custom metric selection: Orders, Revenue, Profit, Returns, Return %.
+### Demographics:
+- By **Income**: Low / Average / High
+- By **Occupation**: Professional / Skilled Manual / Management
 
-4. Customer Insights
-Unique Customers: 17.4K
+---
 
-Average Revenue per Customer: $1,431
+## 🧩 Data Model
 
-Top Customers:
+This report is built using a star schema for optimal performance.
 
-Highest spender: Mr. Maurice Shan with $12.4K across 6 orders.
+### Fact Tables:
+- `Sales Data`
+- `Returns Data`
 
-Analysis by:
+### Dimension Tables:
+- `Calendar Lookup`
+- `Customer Lookup`
+- `Territory Lookup`
+- `Product Lookup`
+- `Product Subcategory Lookup`
+- `Product Category Lookup`
+- `Rolling Calendar`
 
-Income Level (Low, Average, High)
+> Relationships are established via surrogate keys to ensure consistency and efficient querying.
 
-Occupation (Professional, Skilled Manual, Management)
+---
 
-Revenue & customer base trend over time with year filters.
+## 🛠️ Tech Stack
 
-🧩 Data Model (Star Schema)
-The dashboard is powered by a robust data model consisting of:
+- **Power BI Desktop**
+- **DAX (Data Analysis Expressions)**
+- **Power Query (M)**
+- **Star Schema Modeling**
 
-Fact Tables:
-Sales Data: Order details, quantities, prices, and revenue.
+---
 
-Returns Data: Product returns, dates, and territory info.
+## 📌 Future Enhancements
 
-Dimension Tables:
-Calendar Lookup: Date hierarchy, including day, month, and year.
+- Predictive analytics for revenue forecasting
+- Customer segmentation via clustering
+- Inventory optimization suggestions
+- Mobile responsive version
 
-Customer Lookup: Customer demographics including income and occupation.
+---
 
-Territory Lookup: Country, region, and continent information.
+## 📥 How to Use
 
-Product Lookup: Detailed product attributes and pricing.
+1. Clone this repo.
+2. Open the `.pbix` file in Power BI Desktop.
+3. Connect to your data source or use sample data.
+4. Customize visuals, measures, or filters as needed.
 
-Product Subcategories & Categories
+---
 
-Rolling Calendar: Used for time intelligence metrics like MoM, QoQ.
 
-All tables are connected via surrogate keys ensuring referential integrity and efficient querying.
 
-💡 Business Value
-This dashboard empowers decision-makers to:
-
-Track profitability trends and return rates.
-
-Identify high-performing and underperforming products.
-
-Understand customer demographics and behavior.
-
-Optimize inventory and pricing strategies.
-
-Make region-specific marketing and sales decisions.
-
-🔧 Tools & Technologies
-Power BI (Data visualization and modeling)
-
-DAX (For calculated columns, measures, and KPIs)
-
-Power Query (M Language) (ETL processes and data transformation)
-
-📈 Suggested Enhancements
-Integrate forecasting models for revenue and returns.
-
-Add customer segmentation using clustering.
-
-Include drill-through for individual product and customer views.
+> © AdventureWorks | Built for business intelligence and strategic insights.
